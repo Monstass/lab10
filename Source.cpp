@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <vector>
 #include <ctime>
 #include <numeric>
@@ -45,7 +45,7 @@ void made_vector(vector <float>& _array, int _size)
 {
 	for (int i = 0; i < _size; ++i)
 	{
-		// push_back - добавляет элемнты в конец контейнера
+		// push_back - РґРѕР±Р°РІР»СЏРµС‚ СЌР»РµРјРЅС‚С‹ РІ РєРѕРЅРµС† РєРѕРЅС‚РµР№РЅРµСЂР°
 		_array.push_back(rand() % 1000);
 	}
 }
@@ -53,10 +53,10 @@ void made_vector(vector <float>& _array, int _size)
 void show_vector(vector <float>& _array)
 {
 	cout << "Vector: ";
-	// auto i - итератор, на начало контейнера
+	// auto i - РёС‚РµСЂР°С‚РѕСЂ, РЅР° РЅР°С‡Р°Р»Рѕ РєРѕРЅС‚РµР№РЅРµСЂР°
 	for (auto i = _array.begin(); i != _array.end(); ++i)
 	{
-		// вывод с помощью указателя на итератор
+		// РІС‹РІРѕРґ СЃ РїРѕРјРѕС‰СЊСЋ СѓРєР°Р·Р°С‚РµР»СЏ РЅР° РёС‚РµСЂР°С‚РѕСЂ
 		cout << std::fixed << std::setprecision(2) << *i << "  ";
 	}
 }
@@ -64,9 +64,9 @@ void show_vector(vector <float>& _array)
 float find_average(vector <float>& _array)
 {
 	float _average, sum;
-	// std::accumulate - сумма элементов контейнера
+	// std::accumulate - СЃСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РєРѕРЅС‚РµР№РЅРµСЂР°
 	sum = std::accumulate(_array.begin(), _array.end(), 0);
-	// .size() - размер контейнера
+	// .size() - СЂР°Р·РјРµСЂ РєРѕРЅС‚РµР№РЅРµСЂР°
 	_average = sum / _array.size();
 
 	cout << endl << "Average: " << _average;
