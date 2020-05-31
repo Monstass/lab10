@@ -3,6 +3,7 @@
 #include <ctime>
 #include <numeric>
 #include <iomanip>
+#include <algorithm>
 
 using std::cin;
 using std::cout;
@@ -45,7 +46,7 @@ void made_vector(vector <float>& _array, int _size)
 {
 	for (int i = 0; i < _size; ++i)
 	{
-		// push_back - добавляет элемнты в конец контейнера
+		// push_back - добавляет элементы в конец контейнера
 		_array.push_back(rand() % 1000);
 	}
 }
@@ -91,15 +92,9 @@ void find_number_less(vector <float>& _array, float _average)
 
 void find_deviation(vector <float>& _array, float _average)
 {
-	float min = 1000, deviation;
-
-	for (auto i = _array.begin(); i != _array.end(); ++i)
-	{
-		if (*i < min)
-		{
-			min = *i;
-		}
-	}
+	float min, deviation;
+	// min_element - нахождение минимального значения в контейнере
+	min = *std::min_element(_array.begin(), _array.end());
 
 	if (min != 0)
 	{
