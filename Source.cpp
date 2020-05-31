@@ -93,7 +93,7 @@ void find_number_less(vector <float>& _array, float _average)
 void find_deviation(vector <float>& _array, float _average)
 {
 	float min, deviation;
-	// min_element - нахождение минимального значения в контейнере
+	// min_element - нахождение минимального элемента в контейнере
 	min = *std::min_element(_array.begin(), _array.end());
 
 	if (min != 0)
