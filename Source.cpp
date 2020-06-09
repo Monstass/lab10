@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include <vector>
-#include <ctime>
+#include <random>
 #include <numeric>
 #include <iomanip>
 #include <algorithm>
@@ -46,8 +46,11 @@ void made_vector(vector <float>& _array, int _size)
 {
 	for (int i = 0; i < _size; ++i)
 	{
+		std::random_device rd;
+		std::mt19937 mt(rd());
+		std::uniform_real_distribution<float> dist(0, 1001);
 		// push_back - добавляет элементы в конец контейнера
-		_array.push_back(rand() % 1000);
+		_array.push_back(dist(mt));
 	}
 }
 
